@@ -18,7 +18,10 @@ function handleSubmit(event) {
     if (!query) {
         iziToast.warning({
             message: 'Please enter a search query.',
-            position: 'topRight'
+            position: 'topRight',
+            backgroundColor: '#ef4040',
+            messageColor: '#ffffff',
+            maxWidth: 432
         });
         return;
     }
@@ -33,7 +36,10 @@ function handleSubmit(event) {
             if (data.hits.length === 0) {
                 iziToast.error({
                     message: 'Sorry, there are no images matching your search query. Please try again!',
-                    position: 'topRight'
+                    position: 'topRight',
+                    backgroundColor: '#ef4040',
+                    messageColor: '#ffffff',
+                    maxWidth: 432
                 });
                 return;
             }
@@ -44,7 +50,10 @@ function handleSubmit(event) {
             hideLoader();
             iziToast.error({
                 message: 'Failed to fetch images. Please try again later.',
-                position: 'topRight'
+                position: 'topRight',
+                backgroundColor: '#ef4040',
+                messageColor: '#ffffff',
+                maxWidth: 432
             });  
         });
 }

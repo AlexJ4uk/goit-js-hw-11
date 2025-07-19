@@ -9,11 +9,9 @@ export function getImagesByQuery(query) {
             q: query,
             image_type: 'photo',
             orientation: 'horizontal',
-            safesearch: true
+            safesearch: true,
+            per_page: 33
         }
     })
         .then(res => res.data)
-        .catch(error => {
-            throw error;
-        });
 }

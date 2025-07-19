@@ -17,13 +17,12 @@ export function createGallery(images) {
         <img
         class="gallery-image"
         src="${webformatURL}"
-        alt="${tags}"
-        width="360"/>
+        alt="${tags}"/>
         <div class="info-wrap">
-        <p><span>Likes</span>${likes}</p>
-        <p><span>Views</span>${views}</p>
-        <p><span>Comments</span>${comments}</p>
-        <p><span>Downloads</span>${downloads}</p>
+        <p><span><b>Likes</b></span>${likes}</p>
+        <p><span><b>Views</b></span>${views}</p>
+        <p><span><b>Comments</b></span>${comments}</p>
+        <p><span><b>Downloads</b></span>${downloads}</p>
         </div>
         </a>
     </li>`}).join('');
@@ -34,14 +33,14 @@ export function createGallery(images) {
 }
 
 export function clearGallery() {
-gallery.innerHTML = '';
+    gallery.innerHTML = '';
 }
 
 export function showLoader() {
-loader.classList.add('is-visible');
+  loader.classList.add('is-active');
 }
 
 export function hideLoader() {
-loader.classList.remove('is-visible');
+  loader.classList.remove('is-active');
 }
 
